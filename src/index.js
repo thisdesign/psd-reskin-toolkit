@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import hexRgb from "hex-rgb";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { TextBlock, Section, Wrap, Button } from "./Styled";
 import Example from "./Example";
 import Overlay from "./Overlay";
-import hexRgb from "hex-rgb";
 import VisualButton from "./VisualButton";
 
 import "./reset.css";
