@@ -1,0 +1,156 @@
+/* 
+  xl: 1900,
+  lg: 1440,
+  md: 1024,
+  sm: 768,
+  xs: 576,
+*/
+
+html,
+body {
+  font-family: "Circular Pro", sans-serif;
+  color: #081e3f;
+  font-size: 17px;
+}
+
+/* base font sizes increase with browser width */
+
+@media (min-width: 576px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html,
+  body {
+    font-size: 22px;
+  }
+}
+
+/************************************************************
+  TYPOGRAPHY
+*************************************************************/
+
+/* antialiasing */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Set margins on type */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1rem;
+}
+
+/* Set line heights on headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+/* Set paragraph */
+
+p {
+  line-height: 1.5;
+  color: #798495;
+}
+
+/* Set fonts on h1+h2 */
+
+h1,
+h2,
+.serif {
+  font-family: "sangbleu kingdom";
+  font-weight: 400;
+}
+
+/* 
+
+  Set heading font sizes 
+
+  for reference: 
+  https://www.modularscale.com/?1&em&1.2 
+*/
+
+h1 {
+  font-size: 2.04rem;
+}
+
+h2 {
+  font-size: 1.728rem;
+}
+
+h3 {
+  font-size: 1.44rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.83rem;
+}
+
+/* H1 gets bigger at tablet size */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.488rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.9rem;
+  }
+}
+
+/************************************************************
+  MISC
+*************************************************************/
+
+/* Image sizing */
+
+img {
+  width: 100%;
+  display: block;
+}
