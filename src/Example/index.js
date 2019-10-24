@@ -1,5 +1,5 @@
 import React from "react";
-import { TextBlock, Section, Wrap, SideBySide, Button } from "./Styled";
+import { TextBlock, Section, Wrap, SideBySide, Button } from "../Styled";
 
 const Example = () => {
   return (
@@ -52,8 +52,8 @@ const SideBySides = () => (
             dream location.
           </h3>
           <p>
-            Weather you're looking for a job in your dream location or you're
-            already there.
+            Weather you&amp;re looking for a job in your dream location or
+            you&amp;re already there.
           </p>
           <Button>Search by location</Button>
         </SideBySide.Text>

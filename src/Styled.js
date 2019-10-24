@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
-export const Overlay = styled.div`
+export const Code = styled.code`
+  font-family: "menlo", monospace;
+  background: #f3ece0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 60%;
+  color: rgba(0, 0, 0, 0.75);
+`;
+
+export const Overlay = styled(Code)`
   /* position: sticky; */
   display: flex;
   padding: 1rem;
-  background: #f3ece0;
   /* top: 1rem; */
   margin: 1rem;
-  border-radius: 0.5rem;
-  font-family: "menlo", monospace;
-  font-size: 50%;
+
   box-sizing: border-box;
 
   div {
