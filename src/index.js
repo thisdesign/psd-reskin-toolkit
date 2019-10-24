@@ -67,6 +67,7 @@ function App() {
               <div>
                 <SectionHead>Button Style</SectionHead>
                 <Button>Button</Button>
+                {/* <Button>Button</Button> */}
               </div>
             </Grid>
           </Section>
