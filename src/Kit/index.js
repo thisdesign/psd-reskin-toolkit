@@ -1,5 +1,5 @@
 import React from "react";
-import hexRgb from "hex-rgb";
+import rgbHex from "rgb-hex";
 import styled from "styled-components";
 import { TextBlock, Section, Wrap, Button, Code } from "../Styled";
 import VisualButton from "../VisualButton";
@@ -24,17 +24,17 @@ export default () => {
         <Grid>
           <div>
             <p>Color: Primary</p>
-            <ColorBlock hex="081E3F" name="Navy" ltText />
-            <ColorBlock hex="38B4F8" name="Sky" ltText />
-            <ColorBlock hex="C4BFB7" name="Dust" ltText />
+            <ColorBlock rgb={[0, 30, 65]} name="Navy" ltText />
+            <ColorBlock rgb={[56, 180, 248]} name="Sky" ltText />
+            <ColorBlock rgb={[181, 173, 165]} name="Dust" ltText />
           </div>
           <div>
             <p>Color: Greys</p>
-            <ColorBlock hex="7B8493" name="Slate" ltText />
-            <ColorBlock hex="BAC0C9" name="Heather" ltText />
-            <ColorBlock hex="D9DDE3" name="Ghost" />
-            <ColorBlock hex="ECEEF1" name="Cloud" />
-            <ColorBlock hex="F9FAFB" name="Porcelain" />
+            <ColorBlock rgb={[123, 132, 147]} name="Slate" ltText />
+            <ColorBlock rgb={[186, 192, 201]} name="Heather" ltText />
+            <ColorBlock rgb={[217, 221, 227]} name="Ghost" />
+            <ColorBlock rgb={[236, 238, 241]} name="Cloud" />
+            <ColorBlock rgb={[249, 250, 251]} name="Porcelain" />
           </div>
         </Grid>
       </Section>
@@ -57,19 +57,25 @@ export default () => {
   );
 };
 
-const ColorBlock = ({ hex, ltText, name }) => {
-  const { red, green, blue } = hexRgb(hex);
+const ColorBlock = ({ rgb, ltText, name }) => {
+  if (rgb && rgb.length === 3) {
+    const r = rgb[0];
+    const g = rgb[1];
+    const b = rgb[2];
 
-  return (
-    <StyledBlock color={hex} light={ltText}>
-      <code>{name.toUpperCase()}</code>
-
-      <code>#{hex}</code>
-      <code>
-        R {red} / G {green} / B {blue}
-      </code>
-    </StyledBlock>
-  );
+    const hex = rgbHex(r, g, b);
+    return (
+      <StyledBlock color={hex} light={ltText}>
+        <code>{name.toUpperCase()}</code>
+        <code>#{hex}</code>
+        <code>
+          R {r} / G {g} / B {b}
+        </code>
+      </StyledBlock>
+    );
+  }
+  console.error("please insert rgb values");
+  return null;
 };
 
 const StyledBlock = styled.div`
