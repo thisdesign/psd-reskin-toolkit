@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { helpers } from "./theme";
 
 export const Code = styled.code`
   font-family: "menlo", monospace;
@@ -83,14 +84,37 @@ SideBySide.Wrapper = styled.div`
 export const Button = styled.div`
   font-size: 0.8rem;
   color: white;
-  background: rgba(9, 31, 64, 1);
+  background: ${props => helpers.toRgb(props.theme.colors.navy)};
+
   display: inline-block;
-  padding: 0.5em 1.5em;
+  padding: calc(0.5em + 2px) 1.5em;
   border-radius: 1.75em;
   cursor: pointer;
   transition: background 150ms ease-out;
+  margin: 0 0.25em;
 
   &:hover {
-    background: #415069;
+    background: ${props => helpers.toRgb(props.theme.colors.navyAlt)};
+  }
+`;
+
+Button.Alt = styled(Button)`
+  background: ${props => helpers.toRgb(props.theme.colors.sky)};
+
+  &:hover {
+    background: ${props => helpers.toRgb(props.theme.colors.skyAlt)};
+  }
+`;
+
+Button.Ghost = styled(Button)`
+  background: transparent;
+  color: ${props => helpers.toRgb(props.theme.colors.slate)};
+  border: 2px solid ${props => helpers.toRgb(props.theme.colors.sky)};
+
+  padding: 0.5em 1.5em;
+
+  &:hover {
+    color: white;
+    background: ${props => helpers.toRgb(props.theme.colors.sky)};
   }
 `;

@@ -3,6 +3,9 @@ import rgbHex from "rgb-hex";
 import styled from "styled-components";
 import { TextBlock, Section, Wrap, Button, Code } from "../Styled";
 import VisualButton from "../VisualButton";
+import { colors } from "../theme";
+
+const { navy, sky, dust, slate, heather, ghost, cloud, porcelain } = colors;
 
 const HEADING_MSG = "Practice Potential";
 
@@ -24,17 +27,17 @@ export default () => {
         <Grid>
           <div>
             <p>Color: Primary</p>
-            <ColorBlock rgb={[0, 30, 65]} name="Navy" ltText />
-            <ColorBlock rgb={[56, 180, 248]} name="Sky" ltText />
-            <ColorBlock rgb={[181, 173, 165]} name="Dust" ltText />
+            <ColorBlock rgb={navy} name="Navy" ltText />
+            <ColorBlock rgb={sky} name="Sky" ltText />
+            <ColorBlock rgb={dust} name="Dust" ltText />
           </div>
           <div>
             <p>Color: Greys</p>
-            <ColorBlock rgb={[123, 132, 147]} name="Slate" ltText />
-            <ColorBlock rgb={[186, 192, 201]} name="Heather" ltText />
-            <ColorBlock rgb={[217, 221, 227]} name="Ghost" />
-            <ColorBlock rgb={[236, 238, 241]} name="Cloud" />
-            <ColorBlock rgb={[249, 250, 251]} name="Porcelain" />
+            <ColorBlock rgb={slate} name="Slate" ltText />
+            <ColorBlock rgb={heather} name="Heather" ltText />
+            <ColorBlock rgb={ghost} name="Ghost" />
+            <ColorBlock rgb={cloud} name="Cloud" />
+            <ColorBlock rgb={porcelain} name="Porcelain" />
           </div>
         </Grid>
       </Section>
@@ -49,7 +52,8 @@ export default () => {
           <div>
             <SectionHead>Button Style</SectionHead>
             <Button>Button</Button>
-            {/* <Button>Button</Button> */}
+            <Button.Alt>Alt Button</Button.Alt>
+            <Button.Ghost>Ghosted Button</Button.Ghost>
           </div>
         </Grid>
       </Section>
