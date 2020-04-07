@@ -7,8 +7,8 @@ function App() {
     <div>
       <GlobalStyle />
       {SCALE.map((size, i) => (
-        <ScaleMarker size={size}>
-          {i + 1}: {size}
+        <ScaleMarker size={size} index={i}>
+          Practice Partners
         </ScaleMarker>
       ))}
       Hello World
