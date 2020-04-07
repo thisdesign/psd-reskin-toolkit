@@ -1,32 +1,17 @@
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
-import ReactDOM from "react-dom";
-import { Wrap } from "./Styled";
-import Example from "./Example/index";
-import Overlay from "./Overlay";
-import Kit from "./Kit/index";
-import theme from "./theme";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import "./reset.css";
-import "./styles.css";
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-function App() {
-  const [isExample, setIsExample] = useState(false);
-
-  return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <Overlay />
-        <Wrap>
-          <button onClick={() => setIsExample(!isExample)}>
-            {isExample ? "Show Typography" : "Show Example"}
-          </button>
-        </Wrap>
-        {isExample ? <Example /> : <Kit />}
-      </div>
-    </ThemeProvider>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
