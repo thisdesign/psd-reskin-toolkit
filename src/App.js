@@ -8,10 +8,9 @@ function App() {
       <GlobalStyle />
       {SCALE.map((size, i) => (
         <ScaleMarker size={size} index={i}>
-          Practice Partners
+          Committed to care.
         </ScaleMarker>
       ))}
-      Hello World
     </div>
   );
 }
