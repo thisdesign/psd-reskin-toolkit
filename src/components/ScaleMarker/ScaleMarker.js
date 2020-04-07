@@ -7,7 +7,7 @@ const Marker = ({ size, children, index }) => {
       <Header>
         Size {index} • {size}rem • {Math.round(size * 16)}px
       </Header>
-      <MarkerStyle size={size}>{children}</MarkerStyle>
+      <MarkerStyle index={index}>{children}</MarkerStyle>
     </Wrapper>
   );
 };
@@ -18,7 +18,7 @@ const Header = styled.div`
   margin-bottom: var(--size-sm);
 `;
 const MarkerStyle = styled.div`
-  font-size: ${(props) => props.size}em;
+  font-size: ${(props) => `var(--size-${props.index})`};
   color: var(--color-brand);
 `;
 
