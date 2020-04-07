@@ -22,6 +22,7 @@ const Header = styled.div`
   grid-template-columns: repeat(3, 1fr);
   max-width: 20rem;
 `;
+
 const MarkerStyle = styled.div`
   font-size: ${(props) => `var(--size-${props.index})`};
   color: var(--color-brand);
