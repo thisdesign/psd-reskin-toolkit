@@ -1,6 +1,13 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { Code, Wrapper, SectionHead, Paragraph, Section } from "components";
+import {
+  Code,
+  Wrapper,
+  SectionHead,
+  Paragraph,
+  Section,
+  Cols,
+} from "components";
 import { COLORS } from "../../constants";
 import S from "./PageViewColor.Styled";
 
@@ -22,7 +29,7 @@ const ColorPalette = () => {
         </Paragraph>
       </Section>
       <Section>
-        <S.Wrapper>
+        <Cols>
           <div>
             Main
             {MAIN.map((key) => (
@@ -44,7 +51,7 @@ const ColorPalette = () => {
               />
             ))}
           </div>
-        </S.Wrapper>
+        </Cols>
       </Section>
     </Wrapper>
   );

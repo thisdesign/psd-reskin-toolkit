@@ -6,7 +6,7 @@ export const SCALE = modularScale({
   length: 25,
 });
 
-export const SCALE_VARS = SCALE.map(
+export const SCALE_VARS: string[] = SCALE.map(
   (item: string, i: number) => `--size-${i}: ${item}rem`
 );
 

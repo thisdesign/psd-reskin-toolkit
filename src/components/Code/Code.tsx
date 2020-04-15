@@ -17,4 +17,14 @@ export const InlineCode = styled.code`
   color: var(--color-sky);
 `;
 
+export const CodeBlock = styled.pre`
+  font-family: var(--font-mono);
+  font-size: var(--size-1);
+  background: var(--color-porcelain);
+  line-height: 1.5;
+  padding: var(--size-2);
+  border-radius: var(--size-sm);
+  color: var(--color-slate);
+`;
+
 export default Code;
