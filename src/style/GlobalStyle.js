@@ -35,6 +35,14 @@ const style = css`
   body {
     font-size: 16px;
     font-family: var(--font-sans);
+    line-height: 1.2;
+    font-size: 18px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { Code, Wrapper } from "components";
+import { Code, Wrapper, SectionHead } from "components";
 import { COLORS } from "../../constants";
 import S from "./ColorPalette.Styled";
 
@@ -13,6 +13,7 @@ const GREYS: ColorKey[] = ["slate", "heather", "ghost", "cloud", "porcelain"];
 const ColorPalette = () => {
   return (
     <Wrapper>
+      <SectionHead>Color</SectionHead>
       {[MAIN, GREYS].map((colorCollection) => {
         return (
           <div key={colorCollection[0]}>
