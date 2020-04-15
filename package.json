@@ -9,11 +9,13 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "rgb-hex": "^3.0.0",
     "styled-components": "^5.1.0",
     "styled-reset": "^4.1.2",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.19.1",
