@@ -2,7 +2,7 @@ import React from "react";
 import rgbHex from "rgb-hex";
 import { Code, Wrapper, SectionHead } from "components";
 import { COLORS } from "../../constants";
-import S from "./ColorPalette.Styled";
+import S from "./PageViewColor.Styled";
 
 type ColorKey = keyof typeof COLORS;
 type RgbVal = [string, string, string];

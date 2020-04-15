@@ -1,18 +1,13 @@
 import React from "react";
-import { ScaleMarker, ColorPalette, Layout } from "../components";
+import { ScaleMarker, PageViewColor, Layout } from "../components";
 import { SCALE } from "../constants";
 
-function App() {
+function Color() {
   return (
     <Layout>
-      <ColorPalette />
-      {/* {SCALE.map((size, i) => (
-        <ScaleMarker size={size} index={i}>
-          Committed to care.
-        </ScaleMarker>
-      ))} */}
+      <PageViewColor />
     </Layout>
   );
 }
 
-export default App;
+export default Color;
