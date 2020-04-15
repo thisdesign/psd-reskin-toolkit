@@ -1,8 +1,8 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { COLORS, COLOR_VARS } from "../../constants";
+import { Code, Wrapper } from "components";
+import { COLORS } from "../../constants";
 import S from "./ColorPalette.Styled";
-import { Code } from "..";
 
 type ColorKey = keyof typeof COLORS;
 type RgbVal = [string, string, string];
@@ -12,7 +12,7 @@ const GREYS: ColorKey[] = ["slate", "heather", "ghost", "cloud", "porcelain"];
 
 const ColorPalette = () => {
   return (
-    <div>
+    <Wrapper>
       {[MAIN, GREYS].map((colorCollection) => {
         return (
           <div key={colorCollection[0]}>
@@ -26,7 +26,7 @@ const ColorPalette = () => {
           </div>
         );
       })}
-    </div>
+    </Wrapper>
   );
 };
 
