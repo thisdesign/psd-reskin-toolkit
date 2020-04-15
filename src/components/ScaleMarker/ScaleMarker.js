@@ -31,7 +31,7 @@ const MarkerStyle = styled.div`
 
 const Wrapper = styled.div`
   border-bottom: 1px solid #ddd;
-  padding: var(--size-2);
+  padding: var(--size-2) 0;
   overflow: hidden;
 `;
 export default Marker;

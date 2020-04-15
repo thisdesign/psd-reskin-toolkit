@@ -1,6 +1,6 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { Code, Wrapper, SectionHead, Paragraph } from "components";
+import { Code, Wrapper, SectionHead, Paragraph, Section } from "components";
 import { COLORS } from "../../constants";
 import S from "./PageViewColor.Styled";
 
@@ -13,25 +13,29 @@ const GREYS: ColorKey[] = ["slate", "heather", "ghost", "cloud", "porcelain"];
 const ColorPalette = () => {
   return (
     <Wrapper>
-      <SectionHead>Color</SectionHead>
-      <Paragraph>
-        Color is a fundamental element of our visual identity. It subliminally
-        reinforces our visual principals while acting as a signifier of the
-        brand.
-      </Paragraph>
-      {[MAIN, GREYS].map((colorCollection) => {
-        return (
-          <div key={colorCollection[0]}>
-            {colorCollection.map((key) => (
-              <Color
-                key={key}
-                name={key}
-                rgb={(COLORS[key] as unknown) as RgbVal}
-              />
-            ))}
-          </div>
-        );
-      })}
+      <Section>
+        <SectionHead>Color</SectionHead>
+        <Paragraph>
+          Color is a fundamental element of our visual identity. It subliminally
+          reinforces our visual principals while acting as a signifier of the
+          brand.
+        </Paragraph>
+      </Section>
+      <Section>
+        {[MAIN, GREYS].map((colorCollection) => {
+          return (
+            <div key={colorCollection[0]}>
+              {colorCollection.map((key) => (
+                <Color
+                  key={key}
+                  name={key}
+                  rgb={(COLORS[key] as unknown) as RgbVal}
+                />
+              ))}
+            </div>
+          );
+        })}
+      </Section>
     </Wrapper>
   );
 };
