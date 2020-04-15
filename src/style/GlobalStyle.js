@@ -11,6 +11,9 @@ const style = css`
 
     --color-brand: rgb(0, 30, 65);
     --color-slate: rgb(123, 132, 147);
+
+    --font-serif: "SangBleu", times, serif;
+    --font-sans: "Circular", helvetica, arial, sans-serif;
   }
 
   * {
@@ -18,10 +21,20 @@ const style = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  @font-face {
+    font-family: "Circular";
+    src: url("/fonts/lineto-circular-book.woff2");
+  }
+
+  @font-face {
+    font-family: "SangBleu";
+    src: url("/fonts/SangBleuKingdom-Regular.woff2");
+  }
+
   html,
   body {
     font-size: 16px;
-    font-family: CircularPro-Book;
+    font-family: var(--font-sans);
   }
 `;
 
