@@ -12,8 +12,8 @@ module.exports = {
       },
     };
   },
-};
-
-module.exports = {
-  distDir: "out",
+  // distDir: "out",
+  async exportPathMap(defaultPathMap) {
+    return defaultPathMap;
+  },
 };
