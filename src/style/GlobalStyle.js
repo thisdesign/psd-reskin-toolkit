@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import reset from "styled-reset";
 import { SCALE_VARS, COLOR_VARS } from "../constants";
+import mq from "./mq";
 
 const style = css`
   :root {
@@ -36,7 +37,23 @@ const style = css`
     font-size: 16px;
     font-family: var(--font-sans);
     line-height: 1.2;
-    font-size: 18px;
+    font-size: 17px;
+
+    @media ${mq.xs} {
+      font-size: 17px;
+    }
+
+    @media ${mq.sm} {
+      font-size: 18px;
+    }
+
+    @media ${mq.md} {
+      font-size: 20px;
+    }
+
+    @media ${mq.lg} {
+      font-size: 21px;
+    }
   }
 
   a {

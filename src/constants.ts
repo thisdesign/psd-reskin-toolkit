@@ -34,3 +34,11 @@ export const COLOR_RGB = Object.keys(COLORS).map((key: string, i: number) => {
 export const COLOR_VARS = Object.keys(COLORS).map((key: string, i: number) => {
   return `--color-${key}: ${COLOR_RGB[i]}`;
 });
+
+export const SIZES = {
+  xl: 1900,
+  lg: 1440,
+  md: 1024,
+  sm: 768,
+  xs: 576,
+};
