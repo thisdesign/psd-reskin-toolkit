@@ -28,9 +28,9 @@ const PageViewType = () => {
           </Paragraph>
         </Section>
         <Section>
-          <H1>Practice Potential </H1>
+          <H1>Practice Potential</H1>
           <H2>Practice Potential</H2>
-          <H3> Practice Potential</H3>
+          <H3>Practice Potential</H3>
           <H4>Practice Potential</H4>
           <H5>Practice Potential</H5>
           <H6>Practice Potential</H6>

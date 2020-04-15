@@ -39,6 +39,7 @@ const style = css`
     font-family: var(--font-sans);
     line-height: 1.2;
     font-size: ${FONT_SIZES.xxs}px;
+    color: var(--color-navy);
 
     @media ${mq.xs} {
       font-size: ${FONT_SIZES.xs}px;
