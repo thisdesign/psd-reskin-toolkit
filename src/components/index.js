@@ -6,6 +6,7 @@ import SectionHead from "./SectionHead/SectionHead";
 import Paragraph from "./Paragraph/Paragraph";
 import Section from "./Section/Section";
 import SizeBar from "./SizeBar/SizeBar";
+import { H1, H2, H3, H4, H5, H6 } from "./Heading/Heading";
 
 // pages
 import PageViewColor from "./PageViewColor/PageViewColor";
@@ -26,4 +27,10 @@ export {
   Section,
   Paragraph,
   SizeBar,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
 };
