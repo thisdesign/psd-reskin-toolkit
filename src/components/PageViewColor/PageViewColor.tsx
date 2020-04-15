@@ -22,19 +22,29 @@ const ColorPalette = () => {
         </Paragraph>
       </Section>
       <Section>
-        {[MAIN, GREYS].map((colorCollection) => {
-          return (
-            <div key={colorCollection[0]}>
-              {colorCollection.map((key) => (
-                <Color
-                  key={key}
-                  name={key}
-                  rgb={(COLORS[key] as unknown) as RgbVal}
-                />
-              ))}
-            </div>
-          );
-        })}
+        <S.Wrapper>
+          <div>
+            Main
+            {MAIN.map((key) => (
+              <Color
+                key={key}
+                name={key}
+                rgb={(COLORS[key] as unknown) as RgbVal}
+              />
+            ))}
+          </div>
+
+          <div>
+            Greys
+            {GREYS.map((key) => (
+              <Color
+                key={key}
+                name={key}
+                rgb={(COLORS[key] as unknown) as RgbVal}
+              />
+            ))}
+          </div>
+        </S.Wrapper>
       </Section>
     </Wrapper>
   );
