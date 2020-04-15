@@ -13,3 +13,7 @@ module.exports = {
     };
   },
 };
+
+module.exports = {
+  distDir: "out",
+};
