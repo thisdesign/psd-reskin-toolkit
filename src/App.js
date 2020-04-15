@@ -1,6 +1,7 @@
 import React from "react";
-import GlobalStyle, { SCALE } from "./style/GlobalStyle";
+import GlobalStyle from "./style/GlobalStyle";
 import { ScaleMarker } from "./components";
+import { SCALE } from "./constants";
 
 function App() {
   return (

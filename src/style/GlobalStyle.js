@@ -1,18 +1,12 @@
 import { createGlobalStyle, css } from "styled-components";
 import reset from "styled-reset";
-import modularScale from "./modularscale";
-
-export const SCALE = modularScale({
-  scale: 1.2,
-  stepsDown: 2,
-  length: 15,
-});
+import { SCALE_VARS } from "../constants";
 
 const style = css`
   :root {
     --size-xs: 0.25rem;
     --size-sm: 0.5rem;
-    ${SCALE.map((item, i) => `--size-${i}: ${item}rem`).join(";\n")};
+    ${SCALE_VARS.join(";\n")};
 
     --color-brand: rgb(0, 30, 65);
     --color-slate: rgb(123, 132, 147);
