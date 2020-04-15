@@ -1,6 +1,6 @@
 import React from "react";
 import rgbHex from "rgb-hex";
-import { Code, Wrapper, SectionHead } from "components";
+import { Code, Wrapper, SectionHead, Paragraph } from "components";
 import { COLORS } from "../../constants";
 import S from "./PageViewColor.Styled";
 
@@ -14,6 +14,11 @@ const ColorPalette = () => {
   return (
     <Wrapper>
       <SectionHead>Color</SectionHead>
+      <Paragraph>
+        Color is a fundamental element of our visual identity. It subliminally
+        reinforces our visual principals while acting as a signifier of the
+        brand.
+      </Paragraph>
       {[MAIN, GREYS].map((colorCollection) => {
         return (
           <div key={colorCollection[0]}>

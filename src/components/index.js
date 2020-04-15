@@ -1,17 +1,25 @@
 import ScaleMarker from "./ScaleMarker/ScaleMarker";
-import PageViewColor from "./PageViewColor/PageViewColor";
-import Code from "./Code/Code";
+import Code, { InlineCode } from "./Code/Code";
 import Layout from "./Layout/Layout";
 import Wrapper from "./Wrapper/Wrapper";
 import SectionHead from "./SectionHead/SectionHead";
+import Paragraph from "./Paragraph/Paragraph";
+
+// pages
+import PageViewColor from "./PageViewColor/PageViewColor";
 import PageViewSize from "./PageViewSize/PageViewSize";
+import PageViewType from "./PageViewType/PageViewType";
 
 export {
-  PageViewSize,
-  ScaleMarker,
   PageViewColor,
+  PageViewSize,
+  PageViewType,
+  // components
+  ScaleMarker,
   Code,
+  InlineCode,
   Layout,
   Wrapper,
   SectionHead,
+  Paragraph,
 };
