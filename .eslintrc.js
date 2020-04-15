@@ -30,6 +30,13 @@ const TYPESCRIPT_RULES = {
   ],
 };
 
+const NEXTJS_RULES = {
+  // NextJs doesn't require React to be in scope
+  "react/react-in-jsx-scope": 0,
+  // <a> is required in <Link/> without herf
+  "jsx-a11y/anchor-is-valid": 0,
+};
+
 module.exports = {
   parser: "@typescript-eslint/parser", // Specifies the ESLint parser
   extends: ["plugin:@typescript-eslint/recommended", "airbnb", "prettier"],
@@ -58,6 +65,7 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": 0,
     "jsx-a11y/click-events-have-key-events": 0,
 
+    ...NEXTJS_RULES,
     ...TYPESCRIPT_RULES,
   },
 

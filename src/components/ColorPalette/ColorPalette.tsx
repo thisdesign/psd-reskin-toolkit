@@ -15,9 +15,13 @@ const ColorPalette = () => {
     <div>
       {[MAIN, GREYS].map((colorCollection) => {
         return (
-          <div>
+          <div key={colorCollection[0]}>
             {colorCollection.map((key) => (
-              <Color name={key} rgb={(COLORS[key] as unknown) as RgbVal} />
+              <Color
+                key={key}
+                name={key}
+                rgb={(COLORS[key] as unknown) as RgbVal}
+              />
             ))}
           </div>
         );

@@ -5,12 +5,11 @@ import { SCALE } from "../constants";
 function App() {
   return (
     <Layout>
-      <ColorPalette />
-      {/* {SCALE.map((size, i) => (
+      {SCALE.map((size, i) => (
         <ScaleMarker size={size} index={i}>
           Committed to care.
         </ScaleMarker>
-      ))} */}
+      ))}
     </Layout>
   );
 }
