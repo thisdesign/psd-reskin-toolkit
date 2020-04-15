@@ -8,7 +8,7 @@ const Code = styled.code`
 `;
 
 export const InlineCode = styled.code`
-  font-family: roboto mono, monospace;
+  font-family: var(--font-mono);
   display: inline;
   font-size: var(--size-1);
   padding: 0 var(--size-xs);

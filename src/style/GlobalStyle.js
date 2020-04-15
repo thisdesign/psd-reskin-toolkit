@@ -15,6 +15,7 @@ const style = css`
 
     --font-serif: "SangBleu", times, serif;
     --font-sans: "Circular", helvetica, arial, sans-serif;
+    --font-mono: Consolas, Monaco;
   }
 
   * {

@@ -5,6 +5,7 @@ import Wrapper from "./Wrapper/Wrapper";
 import SectionHead from "./SectionHead/SectionHead";
 import Paragraph from "./Paragraph/Paragraph";
 import Section from "./Section/Section";
+import SizeBar from "./SizeBar/SizeBar";
 
 // pages
 import PageViewColor from "./PageViewColor/PageViewColor";
@@ -24,4 +25,5 @@ export {
   SectionHead,
   Section,
   Paragraph,
+  SizeBar,
 };

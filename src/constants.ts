@@ -41,4 +41,14 @@ export const SIZES = {
   md: 1024,
   sm: 768,
   xs: 576,
+  xxs: 0,
+};
+
+export const FONT_SIZES = {
+  xl: 21,
+  lg: 21,
+  md: 20,
+  sm: 19,
+  xs: 18,
+  xxs: 17,
 };
