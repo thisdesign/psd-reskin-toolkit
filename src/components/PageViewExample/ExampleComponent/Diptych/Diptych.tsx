@@ -2,10 +2,13 @@ import React from "react";
 import { Section } from "components";
 import S from "./Diptych.Styled";
 
-const DiptychWrapper: React.FC<{}> = ({ children }) => {
+const DiptychWrapper: React.FC<{ smallWrap?: boolean }> = ({
+  children,
+  smallWrap,
+}) => {
   return (
     <Section>
-      <S.Wrapper>{children}</S.Wrapper>
+      <S.Wrapper smallWrap={smallWrap}>{children}</S.Wrapper>
     </Section>
   );
 };

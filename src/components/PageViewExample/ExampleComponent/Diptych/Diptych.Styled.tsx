@@ -37,11 +37,11 @@ const Image = styled.img`
   display: block;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ smallWrap?: boolean }>`
   display: flex;
   flex-direction: column;
 
-  max-width: 1600px;
+  max-width: ${(props) => (props.smallWrap ? "1200px" : "1600px")};
   margin: 0 auto;
 
   @media ${mq.sm} {

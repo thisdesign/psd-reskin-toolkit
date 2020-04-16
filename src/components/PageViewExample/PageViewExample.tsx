@@ -44,6 +44,18 @@ const Example = () => {
           </Diptych.Text>
           <Diptych.Image src="/image-3.png" />
         </Diptych.Wrapper>
+
+        <Diptych.Wrapper smallWrap>
+          <Diptych.Image src="/image-5.png" />
+          <Diptych.Text>
+            <H3>Standard-Wrap Diptych.</H3>
+            <Paragraph>
+              This diptych follows the standard wrap size (1200px) wheras the
+              others exend past it. This is especially helpful when showing
+              less-important imagery.
+            </Paragraph>
+          </Diptych.Text>
+        </Diptych.Wrapper>
       </Section>
     </Layout>
   );
