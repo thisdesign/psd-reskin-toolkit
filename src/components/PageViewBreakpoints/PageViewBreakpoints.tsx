@@ -12,6 +12,11 @@ import { SIZES, FONT_SIZES } from "../../constants";
 import S from "./PageViewBreakpoints.Styled";
 
 const PageBreakpoints = () => {
+  const breakpointArr = Object.keys(SIZES).map((bkptKey) => ({
+    key: bkptKey,
+    size: SIZES[bkptKey],
+  }));
+
   return (
     <Layout>
       <Section>
@@ -20,14 +25,21 @@ const PageBreakpoints = () => {
           <Paragraph>
             Use the following breakpoints when considering responsive design.
           </Paragraph>
+          <CodeBlock>
+            {breakpointArr.map(({ key, size }) => (
+              <div>
+                {key}: {size}px
+              </div>
+            ))}
+          </CodeBlock>
         </Wrapper>
       </Section>
       <S.BreakpointWrapper>
-        {Object.keys(SIZES).map((size, i) => (
-          <S.Breakpoint width={SIZES[size]} key={size}>
+        {breakpointArr.map(({ key, size }) => (
+          <S.Breakpoint width={size} key={size}>
             <S.BreakpointInner>
               <div>
-                {size.toUpperCase()} &gt;{SIZES[size]}px
+                {key.toUpperCase()} &gt;{size}px
               </div>
             </S.BreakpointInner>
           </S.Breakpoint>
