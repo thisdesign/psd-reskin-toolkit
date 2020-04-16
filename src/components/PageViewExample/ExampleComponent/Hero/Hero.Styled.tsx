@@ -1,12 +1,8 @@
 import styled from "styled-components";
+import { ZoomImg } from "components";
 
-const HERO_IMG =
-  "https://dn9tckvz2rpxv.cloudfront.net/psd/img2/img-banner-home2.jpg";
-
-const HeroWrap = styled.div`
-  background-image: url(${HERO_IMG});
-  background-size: cover;
-  background-position: center;
+const HeroWrap = styled(ZoomImg)`
+  text-align: center;
   min-height: 80vh;
   color: white;
   display: flex;
