@@ -10,9 +10,6 @@ const style = css`
     ${SCALE_VARS.join(";\n")};
     ${COLOR_VARS.join(";\n")};
 
-    --color-brand: rgb(0, 30, 65);
-    --color-slate: rgb(123, 132, 147);
-
     --font-serif: "SangBleu", times, serif;
     --font-sans: "Circular", helvetica, arial, sans-serif;
     --font-mono: Consolas, Monaco;
