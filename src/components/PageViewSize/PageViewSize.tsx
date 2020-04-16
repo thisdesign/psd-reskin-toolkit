@@ -22,8 +22,7 @@ const PageViewSize = () => {
           <H1>Size Scale</H1>
           <Paragraph>
             To enforce consistency and reduce pixel-pushing decision making, we
-            have created a size palette to reference. This is based on a
-            mathematical scale.
+            will use a size palette, based on mathematical scale.
           </Paragraph>
           <Paragraph>
             This mathematical harmony will inform how layout and typography are
@@ -32,12 +31,45 @@ const PageViewSize = () => {
           </Paragraph>
         </Section>
         <Section>
+          <S.InUse>
+            <S.Cell size={10}>S10</S.Cell>
+            <H1>
+              We’re natural helpers
+              <br /> driven by empathy
+            </H1>
+
+            <Paragraph>
+              <S.Cell size={2}>S2</S.Cell>
+              It’s why we all work here—we found like-minded colleagues who
+              enjoy solving problems for people. Ultimately, we like
+              contributing to the growth of stronger healthcare.
+            </Paragraph>
+            <S.Cell size={8}>S8</S.Cell>
+            <H3>What you want, not what others want.</H3>
+            <Paragraph>
+              <S.Cell size={2}>S2</S.Cell>
+              We’ve built a model that is personal, not transactional. We start
+              by listening to who you are and what matters in your world before
+              finding you the best fit.
+              <S.Cell size={2}>S2</S.Cell>
+            </Paragraph>
+            <Paragraph>
+              We&apos;re not focused on quotas, and we don&apos;t work on
+              commission. We&apos;ve reinvented recruitment, offering holistic,
+              personal career coaching that puts providers&apos; needs first.
+            </Paragraph>
+            <S.Cell size={10}>S10</S.Cell>
+          </S.InUse>
+        </Section>
+        <Section>
           <Cols>
             <div>
+              <H3>Size Palette</H3>
+              <Paragraph>A visual breakdown of the sizes in use</Paragraph>
               {SCALE.map(
                 (size, i) =>
                   i < 16 && (
-                    <S.Cell key={size} size={size}>
+                    <S.Cell key={size} size={i}>
                       S{i}
                     </S.Cell>
                   )
@@ -45,7 +77,7 @@ const PageViewSize = () => {
             </div>
             <div>
               <H3>CSS Variables</H3>
-              <Paragraph>Here are the scale sizes in css variables</Paragraph>
+              <Paragraph>Scale sizes as CSS variables</Paragraph>
               <CodeBlock>
                 {SCALE_VARS.map((item) => (
                   <div>{item}</div>
