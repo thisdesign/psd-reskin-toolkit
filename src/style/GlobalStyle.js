@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from "styled-components";
 import reset from "styled-reset";
-import { SCALE_VARS, COLOR_VARS, FONT_SIZES } from "../constants";
+import { SCALE_VARS, COLOR_VARS, FONT_SIZES, EASE_VARS } from "../constants";
 import mq from "./mq";
 
 const style = css`
@@ -9,6 +9,7 @@ const style = css`
     --size-sm: 0.5rem;
     ${SCALE_VARS.join(";\n")};
     ${COLOR_VARS.join(";\n")};
+    ${EASE_VARS.join(";\n")};
 
     --font-serif: "SangBleu", times, serif;
     --font-sans: "Circular", helvetica, arial, sans-serif;

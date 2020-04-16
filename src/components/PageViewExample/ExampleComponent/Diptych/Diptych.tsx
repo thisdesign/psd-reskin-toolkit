@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "components";
+import { Section, ScrollAnim } from "components";
 import S from "./Diptych.Styled";
 
 const DiptychWrapper: React.FC<{ smallWrap?: boolean }> = ({
@@ -16,7 +16,9 @@ const DiptychWrapper: React.FC<{ smallWrap?: boolean }> = ({
 const DiptychText: React.FC<{}> = ({ children }) => {
   return (
     <S.Text>
-      <div>{children}</div>
+      <ScrollAnim>
+        <div>{children}</div>
+      </ScrollAnim>
     </S.Text>
   );
 };
@@ -24,7 +26,9 @@ const DiptychText: React.FC<{}> = ({ children }) => {
 const DiptychImage: React.FC<{ src: string }> = ({ src }) => {
   return (
     <S.ImageWrap>
-      <S.Image src={src} alt="" />
+      <ScrollAnim>
+        <S.Image src={src} alt="" />
+      </ScrollAnim>
     </S.ImageWrap>
   );
 };

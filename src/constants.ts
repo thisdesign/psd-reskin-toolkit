@@ -1,5 +1,12 @@
 import modularScale from "./style/modularscale";
 
+export const EASE: {
+  [key: string]: [number, number, number, number];
+} = {
+  // cubic-bezier(.39,.575,.565,1)
+  decel: [0.0, 0.0, 0.2, 1],
+};
+
 export const SCALE = modularScale({
   scale: 1.2,
   stepsDown: 2,
@@ -55,4 +62,8 @@ export const COLOR_RGB = Object.keys(COLORS).map((key: string, i: number) => {
 
 export const COLOR_VARS = Object.keys(COLORS).map((key: string, i: number) => {
   return `--color-${key}: ${COLOR_RGB[i]}`;
+});
+
+export const EASE_VARS = Object.keys(EASE).map((key: string) => {
+  return `--ease-${key}: ${EASE[key].join(", ")}`;
 });

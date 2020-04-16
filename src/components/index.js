@@ -7,6 +7,7 @@ import Paragraph from "./Paragraph/Paragraph";
 import Section from "./Section/Section";
 import SizeBar from "./SizeBar/SizeBar";
 import Cols from "./Cols/Cols";
+import ScrollAnim from "./ScrollAnim/ScrollAnim";
 import { H1, H2, H3, H4, H5, H6 } from "./Heading/Heading";
 
 // pages
@@ -22,6 +23,7 @@ export {
   PageViewType,
   PageViewExample,
   PageViewBreakpoints,
+  ScrollAnim,
   // components
   ScaleMarker,
   Code,
