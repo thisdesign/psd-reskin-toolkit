@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import S from "./ScrollAnim.Styled";
 
-const ScrollAnim: React.FC = ({ children }) => {
+const ScrollAnim: React.FC<{
+  delay?: number;
+}> = ({ children, delay = 150 }) => {
   const [isInView, setIsInView] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -11,10 +13,10 @@ const ScrollAnim: React.FC = ({ children }) => {
     const setPos = () => {
       if (ref.current) {
         const bounds = ref.current.getBoundingClientRect();
-        const isAboveBottom = bounds.y - windowHeight + 50 < 0;
+        const isAboveBottom = bounds.y - windowHeight < 0;
 
         if (isAboveBottom) {
-          setIsInView(isAboveBottom);
+          setTimeout(() => setIsInView(isAboveBottom), delay);
         }
       }
     };
