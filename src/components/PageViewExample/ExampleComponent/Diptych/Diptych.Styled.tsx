@@ -4,11 +4,14 @@ import { SIZES } from "../../../../constants";
 
 const Text = styled.div`
   flex-basis: 50%;
-  margin: 0 var(--size-4);
   margin-top: var(--size-10);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > div {
+    margin: 0 var(--size-4);
+  }
 
   @media ${mq.md} {
     margin: var(--size-4);
