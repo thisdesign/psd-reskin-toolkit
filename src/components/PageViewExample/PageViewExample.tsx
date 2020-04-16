@@ -8,7 +8,7 @@ import {
   Paragraph,
   ScrollAnim,
 } from "components";
-import { Diptych, Hero } from "./ExampleComponent";
+import { Diptych, Hero, TextOverColor } from "./ExampleComponent";
 
 const Example = () => {
   return (
@@ -70,6 +70,19 @@ const Example = () => {
           </Diptych.Text>
         </Diptych.Wrapper>
       </Section>
+      <TextOverColor>
+        <Wrapper>
+          <ScrollAnim>
+            <H1>Text Inside Color</H1>
+          </ScrollAnim>
+          <ScrollAnim>
+            <Paragraph>
+              To keep the page feeling grounded, elements inside of color block
+              should always animate, rather than the entire color block itself.
+            </Paragraph>
+          </ScrollAnim>
+        </Wrapper>
+      </TextOverColor>
     </Layout>
   );
 };
