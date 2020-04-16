@@ -14,12 +14,14 @@ import PageViewColor from "./PageViewColor/PageViewColor";
 import PageViewSize from "./PageViewSize/PageViewSize";
 import PageViewType from "./PageViewType/PageViewType";
 import PageViewExample from "./PageViewExample/PageViewExample";
+import PageViewBreakpoints from "./PageViewBreakpoints/PageViewBreakpoints";
 
 export {
   PageViewColor,
   PageViewSize,
   PageViewType,
   PageViewExample,
+  PageViewBreakpoints,
   // components
   ScaleMarker,
   Code,

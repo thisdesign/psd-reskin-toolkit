@@ -17,6 +17,7 @@ const Layout: React.FC<{ router: Router }> = ({ children, router }) => {
           <ul>
             {[
               ["Color", "color"],
+              ["Breakpoints", "breakpoints"],
               ["Sizing", "size"],
               ["Typography", "typography"],
               ["Component Example", "example"],
