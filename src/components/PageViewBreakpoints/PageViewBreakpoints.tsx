@@ -27,7 +27,7 @@ const PageBreakpoints = () => {
           </Paragraph>
           <CodeBlock>
             {breakpointArr.map(({ key, size }) => (
-              <div>
+              <div key={key}>
                 {key}: {size}px
               </div>
             ))}
@@ -54,7 +54,7 @@ const PageBreakpoints = () => {
           </Paragraph>
           <CodeBlock>
             {[...Object.keys(FONT_SIZES)].reverse().map((item) => (
-              <div>
+              <div key={item}>
                 {item}: {FONT_SIZES[item]}px
               </div>
             ))}
