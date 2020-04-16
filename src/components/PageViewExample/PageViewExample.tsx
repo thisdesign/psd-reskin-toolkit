@@ -1,5 +1,13 @@
 import React from "react";
-import { Layout, Section, H3, H1, Wrapper, Paragraph } from "components";
+import {
+  Layout,
+  Section,
+  H3,
+  H1,
+  Wrapper,
+  Paragraph,
+  ScrollAnim,
+} from "components";
 import { Diptych } from "./ExampleComponent";
 
 const Example = () => {
@@ -7,14 +15,18 @@ const Example = () => {
     <Layout>
       <Section>
         <Wrapper>
-          <H1>
-            Tell us you why, <br />
-            we&rsquo;ll find your where
-          </H1>
-          <Paragraph>
-            We don’t love the transactional sales mentality in this industry. We
-            have a thing for helping people, so we made our service personal
-          </Paragraph>
+          <ScrollAnim>
+            <H1>
+              Tell us you why, <br />
+              we&rsquo;ll find your where
+            </H1>
+
+            <Paragraph>
+              We don’t love the transactional sales mentality in this industry.
+              We have a thing for helping people, so we made our service
+              personal
+            </Paragraph>
+          </ScrollAnim>
         </Wrapper>
       </Section>
       <Section>
