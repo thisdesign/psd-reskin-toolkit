@@ -25,7 +25,7 @@ const PageViewType = () => {
             Typography should support the brand message. Type should never
             expand beyond <InlineCode>25em</InlineCode>, except when used in
             long-form content like journal pages, where the maximum is{" "}
-            <InlineCode>35em</InlineCode>. Type sizes are informed by the{" "}
+            <InlineCode>42em</InlineCode>. Type sizes are informed by the{" "}
             <Link href="/size">Size Scale</Link>.
           </Paragraph>
           <H4>Type Collapsing</H4>
