@@ -19,6 +19,7 @@ const Layout: React.FC<{ router: Router }> = ({ children, router }) => {
               ["Color", "color"],
               ["Sizing", "size"],
               ["Typography", "typography"],
+              ["Component Example", "example"],
             ].map(([name, route]) => (
               <li key={name}>
                 <Link href={`/${route}`}>

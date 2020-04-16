@@ -3,6 +3,7 @@ import mq from "style/mq";
 
 const GENERICHEAD = css`
   margin-bottom: var(--size-sm);
+  line-height: 1.2;
 `;
 
 export const H1 = styled.h1`

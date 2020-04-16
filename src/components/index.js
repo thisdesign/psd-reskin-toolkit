@@ -13,11 +13,13 @@ import { H1, H2, H3, H4, H5, H6 } from "./Heading/Heading";
 import PageViewColor from "./PageViewColor/PageViewColor";
 import PageViewSize from "./PageViewSize/PageViewSize";
 import PageViewType from "./PageViewType/PageViewType";
+import PageViewExample from "./PageViewExample/PageViewExample";
 
 export {
   PageViewColor,
   PageViewSize,
   PageViewType,
+  PageViewExample,
   // components
   ScaleMarker,
   Code,
