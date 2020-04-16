@@ -36,7 +36,7 @@ const SizeBar = () => {
     <S.Outline>
       <div>Device Width: {size}px</div>
       <div>
-        Breakpoint: {breakpoint.toUpperCase()} (&gt;{SIZES[breakpoint]}px)
+        Breakpoint: {breakpoint.toUpperCase()} (&ge;{SIZES[breakpoint]}px)
       </div>
       <div>Base Font Size: {FONT_SIZES[breakpoint]}px</div>
     </S.Outline>
