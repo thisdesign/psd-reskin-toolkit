@@ -8,11 +8,12 @@ import {
   Paragraph,
   ScrollAnim,
 } from "components";
-import { Diptych } from "./ExampleComponent";
+import { Diptych, Hero } from "./ExampleComponent";
 
 const Example = () => {
   return (
     <Layout>
+      <Hero />
       <Section>
         <Wrapper>
           <ScrollAnim>
