@@ -27,7 +27,7 @@ const PageBreakpoints = () => {
           <S.Breakpoint width={SIZES[size]} key={size}>
             <S.BreakpointInner>
               <div>
-                {size.toUpperCase()} • {SIZES[size]}px
+                {size.toUpperCase()} &gt;{SIZES[size]}px
               </div>
             </S.BreakpointInner>
           </S.Breakpoint>
