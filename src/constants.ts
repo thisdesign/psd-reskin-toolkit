@@ -6,10 +6,6 @@ export const SCALE = modularScale({
   length: 25,
 });
 
-export const SCALE_VARS: string[] = SCALE.map(
-  (item: string, i: number) => `--size-${i}: ${item}rem`
-);
-
 export const COLORS = {
   navy: [0, 30, 65],
   navyAlt: [63, 91, 123],
@@ -25,15 +21,6 @@ export const COLORS = {
   cloud: [236, 238, 241],
   porcelain: [249, 250, 251],
 };
-
-export const COLOR_RGB = Object.keys(COLORS).map((key: string, i: number) => {
-  const [r, g, b] = COLORS[key];
-  return `rgb(${r}, ${g}, ${b})`;
-});
-
-export const COLOR_VARS = Object.keys(COLORS).map((key: string, i: number) => {
-  return `--color-${key}: ${COLOR_RGB[i]}`;
-});
 
 export const SIZES = {
   xl: 1900,
@@ -52,3 +39,20 @@ export const FONT_SIZES = {
   xs: 18,
   xxs: 17,
 };
+
+/**
+ * Transformed
+ */
+
+export const SCALE_VARS: string[] = SCALE.map(
+  (item: string, i: number) => `--size-${i}: ${item}rem`
+);
+
+export const COLOR_RGB = Object.keys(COLORS).map((key: string, i: number) => {
+  const [r, g, b] = COLORS[key];
+  return `rgb(${r}, ${g}, ${b})`;
+});
+
+export const COLOR_VARS = Object.keys(COLORS).map((key: string, i: number) => {
+  return `--color-${key}: ${COLOR_RGB[i]}`;
+});
