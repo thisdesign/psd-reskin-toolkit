@@ -30,8 +30,10 @@ const PageViewSize = () => {
             possible opportunities.
           </Paragraph>
         </Section>
-        <Section>
-          <S.InUse>
+      </Wrapper>
+      <Section>
+        <S.InUse>
+          <Wrapper>
             <S.Cell size={10}>S10</S.Cell>
             <H1>
               We’re natural helpers
@@ -59,8 +61,10 @@ const PageViewSize = () => {
               personal career coaching that puts providers&apos; needs first.
             </Paragraph>
             <S.Cell size={10}>S10</S.Cell>
-          </S.InUse>
-        </Section>
+          </Wrapper>
+        </S.InUse>
+      </Section>
+      <Wrapper>
         <Section>
           <Cols>
             <div>
