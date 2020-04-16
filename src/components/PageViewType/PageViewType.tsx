@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Layout,
   SectionHead,
@@ -22,9 +23,18 @@ const PageViewType = () => {
           <SectionHead>Typography</SectionHead>
           <Paragraph>
             Typography should support the brand message. Type should never
-            expand beyond <InlineCode>25em</InlineCode>. The document font-size
-            grows slightly as the viewport grows. Element-level sizing follow
-            the size guidelines.
+            expand beyond <InlineCode>25em</InlineCode>, except when used in
+            long-form content like journal pages, where the maximum is{" "}
+            <InlineCode>35em</InlineCode>. Type sizes are informed by the{" "}
+            <Link href="/size">Size Scale</Link>.
+          </Paragraph>
+          <H4>Type Collapsing</H4>
+          <Paragraph>
+            The document font-size grows slightly as the viewport grows. For
+            more information, see the{" "}
+            <Link href="/breakpoints">
+              <a>Breakpoint guides</a>
+            </Link>{" "}
           </Paragraph>
         </Section>
         <Section>
