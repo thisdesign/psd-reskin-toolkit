@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
-const Cell = styled.div`
-  padding: var(--size-xs) 0;
-  font-size: var(--size-0);
+const Cell = styled.div<{ size: number }>`
+  font-size: var(--size-sm);
   color: var(--color-heather);
-`;
-
-const Marker = styled.div<{ size: number }>`
-  width: ${(props) => props.size}rem;
   height: ${(props) => props.size}rem;
-  border: 1px solid var(--color-sky);
-  border-radius: 50%;
+  border: 1px solid var(--color-ghost);
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
 `;
 
-export default { Marker, Cell };
+export default { Cell };

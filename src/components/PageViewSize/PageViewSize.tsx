@@ -22,8 +22,13 @@ const PageViewSize = () => {
           <H1>Size Scale</H1>
           <Paragraph>
             To enforce consistency and reduce pixel-pushing decision making, we
-            have created a size palette to reference. This will inform how
-            layout and typography are sized.
+            have created a size palette to reference. This is based on a
+            mathematical scale.
+          </Paragraph>
+          <Paragraph>
+            This mathematical harmony will inform how layout and typography are
+            sized. Rather than hard-coding pixel values, use the scale at all
+            possible opportunities.
           </Paragraph>
         </Section>
         <Section>
@@ -32,9 +37,8 @@ const PageViewSize = () => {
               {SCALE.map(
                 (size, i) =>
                   i < 16 && (
-                    <S.Cell>
-                      <S.Marker size={size} />
-                      (S{i}): {size}rem
+                    <S.Cell key={size} size={size}>
+                      S{i}
                     </S.Cell>
                   )
               )}
@@ -46,10 +50,16 @@ const PageViewSize = () => {
                 {SCALE_VARS.map((item) => (
                   <div>{item}</div>
                 ))}
+                <br />
+                /* Extra small */
+                <br />
+                --size-xs: 0.25rem; <br />
+                --size-sm: 0.5rem;
               </CodeBlock>
             </div>
           </Cols>
         </Section>
+
         <Section>
           <SectionHead>Typography application</SectionHead>
           <Paragraph>An example of the scale applied to typography</Paragraph>

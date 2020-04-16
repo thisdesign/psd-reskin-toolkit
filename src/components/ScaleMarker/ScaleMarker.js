@@ -6,21 +6,16 @@ const Marker = ({ size, children, index }) => {
     <Wrapper>
       <MarkerStyle index={index}>{children}</MarkerStyle>
       <Header>
-        <div>Size {index}</div>
-        <div>{size}rem</div>
-        <div>{Math.round(size * 16)}px</div>
+        <div>S{index}</div>
       </Header>
     </Wrapper>
   );
 };
 
 const Header = styled.div`
-  font-size: var(--size-1);
-  color: var(--color-slate);
-  margin-top: var(--size-sm);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 20rem;
+  font-size: var(--size-sm);
+  color: var(--color-heather);
+  margin-top: var(--size-xs);
 `;
 
 const MarkerStyle = styled.div`
@@ -31,7 +26,8 @@ const MarkerStyle = styled.div`
 
 const Wrapper = styled.div`
   border-bottom: 1px solid #ddd;
-  padding: var(--size-2) 0;
+
+  padding: var(--size-xs) 0;
   overflow: hidden;
 `;
 export default Marker;
