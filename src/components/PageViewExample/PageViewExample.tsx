@@ -1,10 +1,22 @@
 import React from "react";
-import { Layout, Section, H3, Paragraph } from "components";
+import { Layout, Section, H3, H1, Wrapper, Paragraph } from "components";
 import { Diptych } from "./ExampleComponent";
 
 const Example = () => {
   return (
     <Layout>
+      <Section>
+        <Wrapper>
+          <H1>
+            Tell us you why, <br />
+            we&rsquo;ll find your where
+          </H1>
+          <Paragraph>
+            We don’t love the transactional sales mentality in this industry. We
+            have a thing for helping people, so we made our service personal
+          </Paragraph>
+        </Wrapper>
+      </Section>
       <Section>
         <Diptych.Wrapper>
           <Diptych.Image src="/image-2.png" />
