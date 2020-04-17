@@ -43,11 +43,12 @@ const ColorPalette = () => {
 
           <div>
             Greys
-            {GREYS.map((key) => (
+            {GREYS.map((key, i) => (
               <Color
                 key={key}
                 name={key}
                 rgb={(COLORS[key] as unknown) as RgbVal}
+                isDarkText={i > 1}
               />
             ))}
           </div>
@@ -57,10 +58,14 @@ const ColorPalette = () => {
   );
 };
 
-const Color: React.FC<{ name: string; rgb: RgbVal }> = ({ name, rgb }) => {
+const Color: React.FC<{
+  isDarkText?: boolean;
+  name: string;
+  rgb: RgbVal;
+}> = ({ name, rgb, isDarkText }) => {
   const [r, g, b] = rgb;
   return (
-    <S.ColorBlock colorName={name}>
+    <S.ColorBlock colorName={name} isDarkText={isDarkText}>
       <Code>{name}</Code>
       <Code>
         R {r} / G {g} / B {b}
