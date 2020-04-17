@@ -7,6 +7,7 @@ import {
   Paragraph,
   Section,
   Cols,
+  H5,
 } from "components";
 import { COLORS } from "../../constants";
 import S from "./PageViewColor.Styled";
@@ -31,7 +32,7 @@ const ColorPalette = () => {
       <Section>
         <Cols>
           <div>
-            Main
+            <H5>Main</H5>
             {MAIN.map((key) => (
               <Color
                 key={key}
@@ -42,7 +43,7 @@ const ColorPalette = () => {
           </div>
 
           <div>
-            Greys
+            <H5>Greys</H5>
             {GREYS.map((key, i) => (
               <Color
                 key={key}
