@@ -13,6 +13,7 @@ import {
   InlineCode,
 } from "..";
 import { EASE, EASE_VARS, FADE_IN_TIMING } from "../../constants";
+import S from "./PageViewAnimation.Styled";
 
 const Animation = () => {
   return (
@@ -28,6 +29,22 @@ const Animation = () => {
 
           <Cols>
             <div>
+              <H3>Easing curves</H3>
+              <Paragraph>
+                Use one of the following easing curves when animating.
+              </Paragraph>
+
+              <S.BezierWrapper>
+                {Object.keys(EASE).map((key) => (
+                  <div>
+                    <Curve bezier={(EASE[key] as unknown) as number[]} />
+
+                    <InlineCode>{key}</InlineCode>
+                  </div>
+                ))}
+              </S.BezierWrapper>
+
+              <br />
               <H3>Fade-in</H3>
               <Paragraph>
                 objects that fade in should invite the user to interact with it.
@@ -46,6 +63,23 @@ const Animation = () => {
         </Wrapper>
       </Section>
     </Layout>
+  );
+};
+
+const Curve: React.FC<{ bezier: number[] }> = ({ bezier }) => {
+  const e = bezier.map((c) => c * 100);
+
+  const d = [
+    "M0,100", // starting point
+    `c${e[0]},${e[1]}`,
+    `${e[2]},-${e[3]}`,
+    "100,-100", // ending point
+  ].join(" ");
+
+  return (
+    <S.Svg width="100%" viewBox="0 0 100 100" version="1.1">
+      <path d={d} stroke="#979797" strokeWidth="1px" fill="none" />
+    </S.Svg>
   );
 };
 
