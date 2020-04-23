@@ -84,13 +84,17 @@ const PageViewSize = () => {
               <Paragraph>Scale sizes as CSS variables</Paragraph>
               <CodeBlock>
                 {SCALE_VARS.map((item) => (
-                  <div>{item}</div>
+                  <div key={item}>{item}</div>
                 ))}
                 <br />
                 /* Extra small */
                 <br />
                 --size-xs: 0.25rem; <br />
-                --size-sm: 0.5rem;
+                --size-sm: 0.5rem; <br />
+                <br />
+                /* Custom */ <br />
+                --size-section: var(--size-10) <br />
+                --size-gutter: var(--size-4) <br />
               </CodeBlock>
             </div>
           </Cols>
