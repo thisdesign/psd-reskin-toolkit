@@ -4,7 +4,9 @@ export const EASE: {
   [key: string]: [number, number, number, number];
 } = {
   // cubic-bezier(.39,.575,.565,1)
+  standard: [0.4, 0.0, 0.2, 1],
   decel: [0.0, 0.0, 0.2, 1],
+  accel: [0.4, 0.0, 1, 1],
 };
 
 export const SCALE = modularScale({
