@@ -29,7 +29,6 @@ const Animation = () => {
 
           <Cols>
             <div>
-              <br />
               <H3>Fade-in</H3>
               <Paragraph>
                 objects that fade in should invite the user to interact with it.
