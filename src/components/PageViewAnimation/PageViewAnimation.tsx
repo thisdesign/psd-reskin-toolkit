@@ -69,7 +69,7 @@ const Curve: React.FC<{ bezier: number[] }> = ({ bezier }) => {
 
   const d = [
     "M0,100", // starting point
-    `c${e[0]},${e[1]}`,
+    `c${e[0]},-${e[1]}`,
     `${e[2]},-${e[3]}`,
     "100,-100", // ending point
   ].join(" ");
