@@ -17,6 +17,7 @@ import PageViewSize from "./PageViewSize/PageViewSize";
 import PageViewType from "./PageViewType/PageViewType";
 import PageViewExample from "./PageViewExample/PageViewExample";
 import PageViewBreakpoints from "./PageViewBreakpoints/PageViewBreakpoints";
+import PageViewAnimation from "./PageViewAnimation/PageViewAnimation";
 
 export {
   PageViewColor,
@@ -24,9 +25,9 @@ export {
   PageViewType,
   PageViewExample,
   PageViewBreakpoints,
+  PageViewAnimation,
   ScrollAnim,
   ZoomImg,
-  // components
   ScaleMarker,
   Code,
   InlineCode,

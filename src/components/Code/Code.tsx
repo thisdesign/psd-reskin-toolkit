@@ -15,6 +15,7 @@ export const InlineCode = styled.code`
   border-radius: var(--size-xs);
   background: var(--color-cloud);
   color: var(--color-sky);
+  white-space: nowrap;
 `;
 
 export const CodeBlock = styled.pre`

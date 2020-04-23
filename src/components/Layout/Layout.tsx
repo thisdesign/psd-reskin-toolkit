@@ -24,6 +24,7 @@ const Layout: React.FC<{ router: Router }> = ({ children, router }) => {
               ["Breakpoints", "breakpoints"],
               ["Sizing", "size"],
               ["Typography", "typography"],
+              ["Animation", "animation"],
               ["Component Example", "example"],
             ].map(([name, route]) => (
               <li key={name}>

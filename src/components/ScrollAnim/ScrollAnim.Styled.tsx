@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
+import { FADE_IN_TIMING } from "../../constants";
 
 const Wrapper = styled.div<{ inView: boolean }>`
   opacity: 0;
   transform: translate3d(0, var(--size-3), 0);
 
-  transition: 3s opacity cubic-bezier(0.075, 0.82, 0.165, 1),
-    3s transform cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: ${FADE_IN_TIMING} opacity cubic-bezier(var(--ease-decel)),
+    ${FADE_IN_TIMING} transform cubic-bezier(var(--ease-decel));
 
   ${(props) =>
     props.inView &&

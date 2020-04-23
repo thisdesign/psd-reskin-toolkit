@@ -47,6 +47,7 @@ export const FONT_SIZES = {
   xxs: 17,
 };
 
+export const FADE_IN_TIMING = 900;
 /**
  * Transformed
  */
@@ -64,6 +65,6 @@ export const COLOR_VARS = Object.keys(COLORS).map((key: string, i: number) => {
   return `--color-${key}: ${COLOR_RGB[i]}`;
 });
 
-export const EASE_VARS = Object.keys(EASE).map((key: string) => {
+export const EASE_VARS: string[] = Object.keys(EASE).map((key: string) => {
   return `--ease-${key}: ${EASE[key].join(", ")}`;
 });
