@@ -29,6 +29,18 @@ const Animation = () => {
 
           <Cols>
             <div>
+              <br />
+              <H3>Fade-in</H3>
+              <Paragraph>
+                objects that fade in should invite the user to interact with it.
+                To achieve this, the element animates its&apos;{" "}
+                <InlineCode>opacity</InlineCode> and{" "}
+                <InlineCode>translate-y</InlineCode> values for{" "}
+                <InlineCode>{FADE_IN_TIMING}ms</InlineCode>, with a{" "}
+                <InlineCode>--ease-decel</InlineCode> cubic bezier.
+              </Paragraph>
+            </div>
+            <div>
               <H3>Easing curves</H3>
               <Paragraph>
                 Use one of the following easing curves when animating.
@@ -43,20 +55,6 @@ const Animation = () => {
                   </div>
                 ))}
               </S.BezierWrapper>
-
-              <br />
-              <H3>Fade-in</H3>
-              <Paragraph>
-                objects that fade in should invite the user to interact with it.
-                To achieve this, the element animates its&apos;{" "}
-                <InlineCode>opacity</InlineCode> and{" "}
-                <InlineCode>translate-y</InlineCode> values for{" "}
-                <InlineCode>{FADE_IN_TIMING}ms</InlineCode>, with a{" "}
-                <InlineCode>--ease-decel</InlineCode> cubic bezier.
-              </Paragraph>
-            </div>
-            <div>
-              <H3>Ease timings</H3>
               <CodeBlock>{EASE_VARS.map((str) => str).join(";\n")}</CodeBlock>
             </div>
           </Cols>
