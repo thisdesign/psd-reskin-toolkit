@@ -47,7 +47,7 @@ export const FONT_SIZES = {
   xxs: 17,
 };
 
-export const FADE_IN_TIMING = 900;
+export const FADE_IN_TIMING = 800;
 /**
  * Transformed
  */
