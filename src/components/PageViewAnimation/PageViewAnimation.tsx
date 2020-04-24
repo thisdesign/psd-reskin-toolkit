@@ -38,6 +38,23 @@ const Animation = () => {
                 <InlineCode>{FADE_IN_TIMING}ms</InlineCode>, with a{" "}
                 <InlineCode>--ease-decel</InlineCode> cubic bezier.
               </Paragraph>
+
+              <br />
+              <H3>Hero Build</H3>
+              <Paragraph>
+                To give the site some visual flair on first impression, we use a
+                build animation on the hero moment. This animation takes the
+                background image from a zoomed in state (
+                <InlineCode>105%</InlineCode>) and subtly zooms to normal (
+                <InlineCode>100%</InlineCode>). It does this for a total
+                duration of <InlineCode>1600ms</InlineCode> with an{" "}
+                <InlineCode>--ease-decel</InlineCode> bezier curve.
+                <br />
+                <br />
+                Internal elemenmts like lines of text are brought in with the
+                Fade-In effect. For added enhancement, we stagger them in by
+                modifying their delay times.
+              </Paragraph>
             </div>
             <div>
               <H3>Easing curves</H3>
