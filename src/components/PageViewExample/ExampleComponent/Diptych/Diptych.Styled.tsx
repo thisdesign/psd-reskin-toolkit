@@ -42,11 +42,14 @@ const Wrapper = styled.div<{ smallWrap?: boolean }>`
   flex-direction: column;
 
   max-width: ${(props) => (props.smallWrap ? "1200px" : "1600px")};
-  padding: 0 ${(props) => (props.smallWrap ? `var(--size-4)` : "0")};
   margin: 0 auto;
 
   @media ${mq.sm} {
     flex-direction: row;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 ${(props) => (props.smallWrap ? `var(--size-4)` : "0")};
   }
 
   /* swap down on mobile */
