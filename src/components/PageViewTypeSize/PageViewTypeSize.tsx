@@ -64,7 +64,7 @@ const ScaleItem: React.FC<{
       <div>
         <S.ExampleText px={pxVal}>Committed to care.</S.ExampleText>
       </div>
-      {ptRounded}pt • {pxRounded}px • (S{i} - x{scaleSize})
+      {pxRounded}px • (S{i} - x{scaleSize})
     </S.ItemWrapper>
   );
 };
