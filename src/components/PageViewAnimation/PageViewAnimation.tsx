@@ -51,7 +51,7 @@ const Animation = () => {
                 <InlineCode>--ease-decel</InlineCode> bezier curve.
                 <br />
                 <br />
-                Internal elemenmts like lines of text are brought in with the
+                Internal elements like lines of text are brought in with the
                 Fade-In effect. For added enhancement, we stagger them in by
                 modifying their delay times.
               </Paragraph>
