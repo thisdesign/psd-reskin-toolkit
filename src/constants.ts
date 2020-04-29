@@ -51,6 +51,15 @@ export const FONT_SIZES = {
   xxs: 17,
 };
 
+export const FONT_SIZE_SCALE = {
+  h1: { xxs: 6, sm: 7, lg: 8 },
+  h2: { xxs: 5, sm: 6, lg: 7 },
+  h3: { xxs: 4 },
+  h4: { xxs: 3 },
+  h5: { xxs: 2 },
+  h6: { xxs: 1 },
+};
+
 export const FADE_IN_TIMING = 800;
 /**
  * Transformed
