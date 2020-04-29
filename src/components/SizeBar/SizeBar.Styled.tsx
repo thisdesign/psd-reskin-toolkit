@@ -16,7 +16,13 @@ const Outline = styled.div`
 
   @media ${mq.xs} {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) auto;
+
+    a {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: var(--size-xs);
+      border-radius: var(--size-xs);
+    }
   }
 `;
 

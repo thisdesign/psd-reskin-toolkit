@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import S from "./SizeBar.Styled";
 import { SIZES, FONT_SIZES } from "../../constants";
+import { LATEST_VERSION } from "../../changelog";
 
 const useSize = () => {
   const [size, setSize] = useState<number>(0);
@@ -39,6 +40,9 @@ const SizeBar = () => {
         Breakpoint: {breakpoint.toUpperCase()} (&ge;{SIZES[breakpoint]}px)
       </div>
       <div>Base Font Size: {FONT_SIZES[breakpoint]}px</div>
+      <div>
+        <a href="/changelog">v{LATEST_VERSION.number}</a>
+      </div>
     </S.Outline>
   );
 };
