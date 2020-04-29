@@ -11,12 +11,12 @@ export const VERSIONS: Version[] = [
     date: new Date("4/9/20"),
   },
   {
-    number: "0.1.1",
+    number: "0.2.0",
     changes: ["Added Midnight Color"],
     date: new Date("4/29/20"),
   },
   {
-    number: "0.1.2",
+    number: "0.2.1",
     changes: ["Added /sketch/ route for This design team."],
     date: new Date("4/29/20"),
   },

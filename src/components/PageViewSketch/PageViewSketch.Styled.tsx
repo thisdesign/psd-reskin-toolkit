@@ -18,15 +18,12 @@ const ExampleText = styled.div<{ px: number }>`
 const TableWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--size-2);
 `;
 
 const TableCol = styled.div`
   border: 1px solid var(--color-ghost);
   border-bottom: 0;
-
-  &:not(:last-child) {
-    border-right: 0;
-  }
 `;
 
 const TableCell = styled.div<{ head?: boolean }>`

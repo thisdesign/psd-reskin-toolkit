@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Layout, Wrapper, Section, H1, InlineCode } from "components";
 import Link from "next/link";
 import S from "./PageViewSketch.Styled";
@@ -44,65 +44,84 @@ const PageViewTypeSize: React.FC<{ browserSize?: string }> = ({
         <Section>
           <H1>Sketch Guidelines</H1>
         </Section>
-        <S.TableWrapper>
-          {TYPE_SIZES.map(({ name, size, sizeCode }) => (
-            <S.TableCol key={name}>
-              <S.TableCell head>{name}</S.TableCell>
-              <S.TableCell>
-                Artboard: <InlineCode> {size}px</InlineCode>
-              </S.TableCell>
-              <S.TableCell>
-                Base font: <InlineCode>{FONT_SIZES[sizeCode]}px</InlineCode>
-              </S.TableCell>
-              {Object.keys(FONT_SIZE_SCALE).map((hSize) => {
-                const sizeKeys = Object.keys(SIZES);
-                const bkptCandidates = [...sizeKeys].slice(
-                  sizeKeys.indexOf(sizeCode),
-                  sizeKeys.length
-                );
-
-                const headingSizeCode = bkptCandidates.reduce((acc, cur) => {
-                  const foundSize = FONT_SIZE_SCALE[hSize][cur];
-
-                  return foundSize && acc === -1 ? foundSize : acc;
-                }, -1);
-
-                const scaleFactor = SCALE[headingSizeCode];
-                const fontSize = scaleFactor * FONT_SIZES[sizeCode];
-                const fontSizeRounded = Math.round(fontSize);
-
-                return (
-                  <S.TableCell key={hSize}>
-                    {hSize}: <InlineCode>{fontSizeRounded}px</InlineCode>
+        <Section>
+          <S.TableWrapper>
+            {TYPE_SIZES.map(({ name, size, sizeCode }) => (
+              <div>
+                <S.TableCol key={name}>
+                  <S.TableCell head>{name}</S.TableCell>
+                  <S.TableCell>
+                    Artboard: <InlineCode> {size}px</InlineCode>
                   </S.TableCell>
-                );
-              })}
-            </S.TableCol>
-          ))}
-        </S.TableWrapper>
+                  <S.TableCell>
+                    Base font: <InlineCode>{FONT_SIZES[sizeCode]}px</InlineCode>
+                  </S.TableCell>
+
+                  <FontSizes sizeCode={sizeCode} />
+                  <ScaleSizes sizeCode={sizeCode} />
+                </S.TableCol>
+              </div>
+            ))}
+          </S.TableWrapper>
+        </Section>
       </Wrapper>
     </Layout>
   );
 };
 
-const ScaleItem: React.FC<{
-  i: number;
-  browserSize: string;
-  scaleSize: number;
-}> = ({ browserSize, scaleSize, i }) => {
-  const pxVal = FONT_SIZES[browserSize] * scaleSize;
-  const ptVal = pxVal / (1 / 3 + 1);
-
-  const pxRounded = Math.round(pxVal);
-  const ptRounded = Math.round(ptVal);
-
+const FontSizes: React.FC<{ sizeCode: string }> = ({ sizeCode }) => {
   return (
-    <S.ItemWrapper>
-      <div>
-        <S.ExampleText px={pxVal}>Committed to care.</S.ExampleText>
-      </div>
-      {pxRounded}px • (S{i} - x{scaleSize})
-    </S.ItemWrapper>
+    <>
+      <S.TableCell head>Font Sizing</S.TableCell>
+
+      {Object.keys(FONT_SIZE_SCALE).map((hSize) => {
+        const sizeKeys = Object.keys(SIZES);
+        const bkptCandidates = [...sizeKeys].slice(
+          sizeKeys.indexOf(sizeCode),
+          sizeKeys.length
+        );
+
+        const headingSizeCode = bkptCandidates.reduce((acc, cur) => {
+          const foundSize = FONT_SIZE_SCALE[hSize][cur];
+
+          return foundSize && acc === -1 ? foundSize : acc;
+        }, -1);
+
+        const scaleFactor = SCALE[headingSizeCode];
+        const fontSize = scaleFactor * FONT_SIZES[sizeCode];
+        const fontSizeRounded = Math.round(fontSize);
+
+        return (
+          <S.TableCell key={hSize}>
+            {hSize}: <InlineCode>{fontSizeRounded}px</InlineCode>
+          </S.TableCell>
+        );
+      })}
+    </>
+  );
+};
+
+const ScaleSizes: React.FC<{ sizeCode: string }> = ({ sizeCode }) => {
+  const [isScaleShown, setScaleShown] = useState<boolean>(false);
+  const scales = Object.keys(SCALE).map((key) => ({
+    key,
+    size: Math.round(SCALE[key] * FONT_SIZES[sizeCode]),
+  }));
+  return (
+    <div>
+      <S.TableCell head onClick={() => setScaleShown(!isScaleShown)}>
+        {isScaleShown ? "Hide" : "Show"} full scale
+      </S.TableCell>
+      {isScaleShown && (
+        <>
+          {[...scales].slice(0, 15).map(({ key, size }) => (
+            <S.TableCell>
+              S{key}: <InlineCode>{size}px</InlineCode>
+            </S.TableCell>
+          ))}
+        </>
+      )}
+    </div>
   );
 };
 
