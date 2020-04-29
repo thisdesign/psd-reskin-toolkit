@@ -1,9 +1,9 @@
 import React from "react";
-import { PageViewTypeSize } from "components";
+import { PageViewSketch } from "components";
 import { NextPage } from "next";
 
 const TypeSize: NextPage<{ size: string }> = ({ size }) => {
-  return <PageViewTypeSize browserSize={size} />;
+  return <PageViewSketch browserSize={size} />;
 };
 
 TypeSize.getInitialProps = async ({ query }) => {

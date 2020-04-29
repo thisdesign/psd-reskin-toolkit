@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Wrapper, Section, H1 } from "components";
 import Link from "next/link";
-import S from "./PageViewTypeSize.Styled";
+import S from "./PageViewSketch.Styled";
 import { SCALE, SIZES, FONT_SIZES } from "../../constants";
 
 const keys = [...Object.keys(FONT_SIZES)].reverse();
@@ -17,7 +17,7 @@ const PageViewTypeSize: React.FC<{ browserSize?: string }> = ({
     <Layout>
       <Wrapper>
         <Section>
-          <H1>Sketch Type sizing</H1>
+          <H1>Sketch Guidelines</H1>
         </Section>
         <Section>
           {keys.map((key) => (
