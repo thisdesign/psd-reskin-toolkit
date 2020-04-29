@@ -15,29 +15,36 @@ const ExampleText = styled.div<{ px: number }>`
   color: var(--color-navy);
 `;
 
-const SizeKey = styled.div<{ current: boolean }>`
-  border: 1px solid var(--color-heather);
-  color: var(--color-heather);
-  width: var(--size-6);
-  height: var(--size-6);
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: var(--size-xs);
-  margin-bottom: var(--size-sm);
+const TableWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+const TableCol = styled.div`
+  border: 1px solid var(--color-ghost);
+  border-bottom: 0;
+
+  &:not(:last-child) {
+    border-right: 0;
+  }
+`;
+
+const TableCell = styled.div<{ head?: boolean }>`
+  border-bottom: 1px solid var(--color-ghost);
+  padding: var(--size-sm);
+  font-size: var(--size-1);
 
   ${(props) =>
-    props.current &&
+    props.head &&
     css`
-      background: var(--color-navy);
-      border: 1px solid var(--color-navy);
-      color: var(--color-porcelain);
-    `};
+      background: var(--color-porcelain);
+    `}
 `;
 
 export default {
   ItemWrapper,
-  SizeKey,
   ExampleText,
+  TableWrapper,
+  TableCol,
+  TableCell,
 };

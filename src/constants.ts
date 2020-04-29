@@ -9,7 +9,7 @@ export const EASE: {
   accel: [0.4, 0.0, 1, 1],
 };
 
-export const SCALE = modularScale({
+export const SCALE: number[] = modularScale({
   scale: 1.2,
   stepsDown: 2,
   length: 25,
@@ -57,7 +57,7 @@ export const FADE_IN_TIMING = 800;
  */
 
 export const SCALE_VARS: string[] = SCALE.map(
-  (item: string, i: number) => `--size-${i}: ${item}rem`
+  (item: number, i: number) => `--size-${i}: ${item}rem`
 );
 
 export const COLOR_RGB = Object.keys(COLORS).map((key: string, i: number) => {
