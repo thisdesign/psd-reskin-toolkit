@@ -22,6 +22,8 @@ export const COLORS = {
   sky: [56, 180, 248],
   skyAlt: [14, 147, 220],
 
+  midnight: [10, 23, 32],
+
   dust: [181, 173, 165],
 
   slate: [123, 132, 147],

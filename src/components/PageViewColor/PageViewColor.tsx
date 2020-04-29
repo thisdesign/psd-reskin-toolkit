@@ -15,7 +15,7 @@ import S from "./PageViewColor.Styled";
 type ColorKey = keyof typeof COLORS;
 type RgbVal = [string, string, string];
 
-const MAIN: ColorKey[] = ["navy", "sky", "dust"];
+const MAIN: ColorKey[] = ["navy", "sky", "dust", "midnight"];
 const GREYS: ColorKey[] = ["slate", "heather", "ghost", "cloud", "porcelain"];
 
 const ColorPalette = () => {
