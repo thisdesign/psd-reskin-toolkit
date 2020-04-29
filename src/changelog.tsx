@@ -17,10 +17,7 @@ export const VERSIONS: Version[] = [
   },
   {
     number: "0.1.2",
-    changes: [
-      "Reduced h2 and h1 heading sizes at tablet breakpoint",
-      "Added /sketch/ route for This design team.",
-    ],
+    changes: ["Added /sketch/ route for This design team."],
     date: new Date("4/29/20"),
   },
 ];
