@@ -20,6 +20,11 @@ export const VERSIONS: Version[] = [
     changes: ["Added /sketch/ route for This design team."],
     date: new Date("4/29/20"),
   },
+  {
+    number: "0.2.2",
+    changes: ["Changed some wording on component example"],
+    date: new Date("4/30/20"),
+  },
 ];
 
 export const LATEST_VERSION = VERSIONS[VERSIONS.length - 1];

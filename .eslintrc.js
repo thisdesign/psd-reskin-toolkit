@@ -42,6 +42,9 @@ module.exports = {
   extends: ["plugin:@typescript-eslint/recommended", "airbnb", "prettier"],
   plugins: ["@typescript-eslint"],
   rules: {
+    //require key
+    "react/jsx-key": 1,
+
     // idk
     "import/no-cycle": 0,
 
