@@ -3,6 +3,7 @@ import {
   Layout,
   Section,
   H3,
+  H2,
   H1,
   Wrapper,
   Paragraph,
@@ -17,10 +18,10 @@ const Example = () => {
       <Section>
         <Wrapper>
           <ScrollAnim>
-            <H1>
+            <H2>
               Tell us you why, <br />
               we&rsquo;ll find your where
-            </H1>
+            </H2>
 
             <Paragraph>
               We don’t love the transactional sales mentality in this industry.
