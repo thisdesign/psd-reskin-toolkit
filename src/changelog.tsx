@@ -25,6 +25,13 @@ export const VERSIONS: Version[] = [
     changes: ["Changed some wording on component example"],
     date: new Date("4/30/20"),
   },
+  {
+    number: "0.3.0",
+    changes: [
+      "Added raincloud color too meet AA accessability standards for grey-on-grey",
+    ],
+    date: new Date("4/30/20"),
+  },
 ];
 
 export const LATEST_VERSION = VERSIONS[VERSIONS.length - 1];

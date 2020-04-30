@@ -26,6 +26,7 @@ export const COLORS = {
 
   dust: [181, 173, 165],
 
+  raincloud: [97, 107, 125],
   slate: [123, 132, 147],
   heather: [186, 192, 201],
   ghost: [217, 221, 227],

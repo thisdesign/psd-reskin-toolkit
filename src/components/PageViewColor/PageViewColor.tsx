@@ -16,7 +16,14 @@ type ColorKey = keyof typeof COLORS;
 type RgbVal = [string, string, string];
 
 const MAIN: ColorKey[] = ["navy", "sky", "dust", "midnight"];
-const GREYS: ColorKey[] = ["slate", "heather", "ghost", "cloud", "porcelain"];
+const GREYS: ColorKey[] = [
+  "raincloud",
+  "slate",
+  "heather",
+  "ghost",
+  "cloud",
+  "porcelain",
+];
 
 const ColorPalette = () => {
   return (
